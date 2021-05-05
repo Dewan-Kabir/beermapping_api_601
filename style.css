@@ -1,0 +1,21 @@
+card{
+    padding:5px;
+    margin: 5px;
+    border-color: blue;
+}
+
+.row{
+    margin: 5px;
+}
+
+.col{
+    margin:5px;
+}
+
+#div1{
+    text-align:center;
+}
+button{
+    margin:5px;
+    padding: 3px;
+}

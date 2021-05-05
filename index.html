@@ -88,38 +88,7 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col">
-                    <div class="card card_07">
-                        <div class="card-title"> 
-                            <button class="btn btn-primary" onclick="fetchText7()">Get Fetch Data</button>
-                        </div>
-                        <div class="card-body" id="fetch_result7">
-        
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card card_08">
-                        <div class="card-title"> 
-                            <button class="btn btn-primary" onclick="fetchText8()">Get Fetch Data</button>
-                        </div>
-                        <div class="card-body" id="fetch_result8">
-        
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card card_09">
-                        <div class="card-title"> 
-                            <button class="btn btn-primary" onclick="fetchText9()">Get Fetch Data</button>
-                        </div>
-                        <div class="card-body" id="fetch_result9">
-        
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
             
         </div>
     </div>
@@ -145,16 +114,17 @@
             let data = await response.text();
             console.log(data)
             var obj = JSON.parse(data);
+            console.log(obj);
             ;
         
             var card_data = document.getElementById('fetch_result1');
             card_data.innerHTML = `
-            
+            <h2>Lets see some Beer</h2>
             <p>Name : ${obj[0].name} </p> <br>
-            <p>Status : ${data.status} </p> <br>
-            <p>Review Link : ${data.reviewlink} </p> <br>
-            <p>Street : ${data.street} </p> <br>
-            <p>City : ${data.city} </p> <br>
+            <p>Status : ${obj[0].status} </p> <br>
+            <p>Review Link : ${obj[0].reviewlink} </p> <br>
+            <p>Street : ${obj[0].street} </p> <br>
+            <p>City : ${obj[0].city} </p> <br>
             
             
             
@@ -166,97 +136,139 @@
         }
 
         async function fetchText2() {
-            let response = await fetch('https://zumatra.com/teach/colors.php');
+            let response = await fetch('https://beermapping.com/webservice/locstate/31a036c1f5fc74ab0fffa932bf1d1da2/tx&s=json');
             let data = await response.text();
-            console.log(data);
+            console.log(data)
+            var obj = JSON.parse(data);
+            console.log(obj);
         
             var card_data = document.getElementById('fetch_result2');
-            card_data.innerHTML = data;
+            card_data.innerHTML = 
+            `
+            <h2>By Sate</h2>
+            <p>Name : ${obj[0].name} </p> <br>
+            <p>Status : ${obj[0].status} </p> <br>
+            <p>Review Link : ${obj[0].reviewlink} </p> <br>
+            <p>State : ${obj[0].state} </p> <br>
+            <p>City : ${obj[0].city} </p> <br>
+            <p>Zip Code : ${obj[0].zip} </p> <br>
+            
+            
+            
+            
+            `;
         
         
         }
         
 
         async function fetchText3() {
-            let response = await fetch('https://zumatra.com/teach/colors.php');
+            let response = await fetch('https://beermapping.com/webservice/loccity/31a036c1f5fc74ab0fffa932bf1d1da2/dallas,tx&s=json');
             let data = await response.text();
-            console.log(data);
+            console.log(data)
+            var obj = JSON.parse(data);
+            console.log(obj);
         
             var card_data = document.getElementById('fetch_result3');
-            card_data.innerHTML = data;
+            card_data.innerHTML = `
+            <h2>By City Dallas TX</h2>
+            <p>Name : ${obj[0].name} </p> <br>
+            <p>Status : ${obj[0].status} </p> <br>
+            <p>Review Link : ${obj[0].reviewlink} </p> <br>
+            <p>State : ${obj[0].state} </p> <br>
+            <p>City : ${obj[0].city} </p> <br>
+            <p>Zip Code : ${obj[0].zip} </p> <br>
+            <p>Phone Number : ${obj[0].phone} </p> <br>
+            <p>URL : ${obj[0].url} </p> <br>
+
+            
+            
+            
+            
+            `;
         
         
         }
         
 
         async function fetchText4() {
-            let response = await fetch('https://zumatra.com/teach/colors.php');
+            let response = await fetch('https://beermapping.com/webservice/locscore/31a036c1f5fc74ab0fffa932bf1d1da2/1000&s=json');
             let data = await response.text();
-            console.log(data);
+            console.log(data)
+            var obj = JSON.parse(data);
+            console.log(obj);
         
             var card_data = document.getElementById('fetch_result4');
-            card_data.innerHTML = data;
+            card_data.innerHTML = `
+            <h2>Review for Loc 1000</h2>
+            <p>Overall : ${obj[0].overall} </p> <br>
+            <p>Selection Rating : ${obj[0].selection} </p> <br>
+            <p>Atmosphere : ${obj[0].atmosphere} </p> <br>
+            <p>food Quality : ${obj[0].food} </p> <br>
+            <p>Reviews : ${obj[0].reviewcount} </p> <br>
+    
+            `;
         
         
         }
         
 
         async function fetchText5() {
-            let response = await fetch('https://zumatra.com/teach/colors.php');
+            let response = await fetch('https://beermapping.com/webservice/locstate/31a036c1f5fc74ab0fffa932bf1d1da2/ny&s=json');
             let data = await response.text();
-            console.log(data);
+            console.log(data)
+            var obj = JSON.parse(data);
+            console.log(obj);
         
-            var card_data = document.getElementById('fetch_result5');
-            card_data.innerHTML = data;
+            var card_data = document.getElementById('fetch_result2');
+            card_data.innerHTML = 
+            `
+            <h2>By Sate NY</h2>
+            <p>Name : ${obj[0].name} </p> <br>
+            <p>Status : ${obj[0].status} </p> <br>
+            <p>Review Link : ${obj[0].reviewlink} </p> <br>
+            <p>State : ${obj[0].state} </p> <br>
+            <p>City : ${obj[0].city} </p> <br>
+            <p>Zip Code : ${obj[0].zip} </p> <br>
+            
+            
+            
+            
+            `;
         
         
         }
         
 
         async function fetchText6() {
-            let response = await fetch('https://zumatra.com/teach/colors.php');
+            let response = await fetch('https://beermapping.com/webservice/loccity/31a036c1f5fc74ab0fffa932bf1d1da2/austin,tx&s=json');
             let data = await response.text();
-            console.log(data);
+            console.log(data)
+            var obj = JSON.parse(data);
+            console.log(obj);
         
-            var card_data = document.getElementById('fetch_result6');
-            card_data.innerHTML = data;
-        
-        
-        }
-        
-        async function fetchText7() {
-            let response = await fetch('https://zumatra.com/teach/colors.php');
-            let data = await response.text();
-            console.log(data);
-        
-            var card_data = document.getElementById('fetch_result7');
-            card_data.innerHTML = data;
-        
-        
-        }
-        
+            var card_data = document.getElementById('fetch_result3');
+            card_data.innerHTML = `
+            <h2>By City Austin TX</h2>
+            <p>Name : ${obj[0].name} </p> <br>
+            <p>Status : ${obj[0].status} </p> <br>
+            <p>Review Link : ${obj[0].reviewlink} </p> <br>
+            <p>State : ${obj[0].state} </p> <br>
+            <p>City : ${obj[0].city} </p> <br>
+            <p>Zip Code : ${obj[0].zip} </p> <br>
+            <p>Phone Number : ${obj[0].phone} </p> <br>
+            <p>URL : ${obj[0].url} </p> <br>
 
-        async function fetchText8() {
-            let response = await fetch('https://zumatra.com/teach/colors.php');
-            let data = await response.text();
-            console.log(data);
-        
-            var card_data = document.getElementById('fetch_result8');
-            card_data.innerHTML = data;
+            
+            
+            
+            
+            `;
         
         
         }
         
-        async function fetchText9() {
-            let response = await fetch('https://zumatra.com/teach/colors.php');
-            let data = await response.text();
-            console.log(data);
-        
-            var card_data = document.getElementById('fetch_result9');
-            card_data.innerHTML = data;
-        
-        
-        }
+       
         
 
         
