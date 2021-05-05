@@ -13,6 +13,268 @@
   <body>
     <h1>Beer Mapping - Dewan Kabir</h1>
 
+
+
+    <div id="div1"><h2>AJAX Practice Homework -Dewan Kabir</h2></div>
+    <button class="btn btn-primary" onclick="fetchText()">Get Fetch Data</button>
+
+
+<section>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card card_01">
+                        <div class="card-title"> 
+                            <button class="btn btn-primary" onclick="fetchText1()">Get Fetch Data</button>
+                        </div>
+                        <div class="card-body" id="fetch_result1">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card_02">
+                        <div class="card-title"> 
+                            <button class="btn btn-primary" onclick="fetchText2()">Get Fetch Data</button>
+                        </div>
+                        <div class="card-body" id="fetch_result2">
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card_03">
+                        <div class="card-title"> 
+                            <button class="btn btn-primary" onclick="fetchText3()">Get Fetch Data</button>
+                        </div>
+                        <div class="card-body" id="fetch_result3">
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="card card_04">
+                        <div class="card-title"> 
+                            <button class="btn btn-primary" onclick="fetchText4()">Get Fetch Data</button>
+                        </div>
+                        <div class="card-body" id="fetch_result4">
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card_05">
+                        <div class="card-title"> 
+                            <button class="btn btn-primary" onclick="fetchText5()">Get Fetch Data</button>
+                        </div>
+                        <div class="card-body" id="fetch_result5">
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card_06">
+                        <div class="card-title"> 
+                            <button class="btn btn-primary" onclick="fetchText6()">Get Fetch Data</button>
+                        </div>
+                        <div class="card-body" id="fetch_result6">
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="card card_07">
+                        <div class="card-title"> 
+                            <button class="btn btn-primary" onclick="fetchText7()">Get Fetch Data</button>
+                        </div>
+                        <div class="card-body" id="fetch_result7">
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card_08">
+                        <div class="card-title"> 
+                            <button class="btn btn-primary" onclick="fetchText8()">Get Fetch Data</button>
+                        </div>
+                        <div class="card-body" id="fetch_result8">
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card_09">
+                        <div class="card-title"> 
+                            <button class="btn btn-primary" onclick="fetchText9()">Get Fetch Data</button>
+                        </div>
+                        <div class="card-body" id="fetch_result9">
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+
+
+
+
+        async function fetchText1() {
+            let response = await fetch('http://beermapping.com/webservice/locquery/31a036c1f5fc74ab0fffa932bf1d1da2/piece&s=json');
+            let data = await response.text();
+            console.log(data)
+            ;
+        
+            var card_data = document.getElementById('fetch_result1');
+            card_data.innerHTML = `
+            
+            <p>Name : ${data.name} </p> <br>
+            <p>Status : ${data.status} </p> <br>
+            <p>Review Link : ${data.reviewlink} </p> <br>
+            <p>Street : ${data.street} </p> <br>
+            <p>City : ${data.city} </p> <br>
+            
+            
+            
+            
+            
+            `;
+        
+        
+        }
+
+        async function fetchText2() {
+            let response = await fetch('https://zumatra.com/teach/colors.php');
+            let data = await response.text();
+            console.log(data);
+        
+            var card_data = document.getElementById('fetch_result2');
+            card_data.innerHTML = data;
+        
+        
+        }
+        
+
+        async function fetchText3() {
+            let response = await fetch('https://zumatra.com/teach/colors.php');
+            let data = await response.text();
+            console.log(data);
+        
+            var card_data = document.getElementById('fetch_result3');
+            card_data.innerHTML = data;
+        
+        
+        }
+        
+
+        async function fetchText4() {
+            let response = await fetch('https://zumatra.com/teach/colors.php');
+            let data = await response.text();
+            console.log(data);
+        
+            var card_data = document.getElementById('fetch_result4');
+            card_data.innerHTML = data;
+        
+        
+        }
+        
+
+        async function fetchText5() {
+            let response = await fetch('https://zumatra.com/teach/colors.php');
+            let data = await response.text();
+            console.log(data);
+        
+            var card_data = document.getElementById('fetch_result5');
+            card_data.innerHTML = data;
+        
+        
+        }
+        
+
+        async function fetchText6() {
+            let response = await fetch('https://zumatra.com/teach/colors.php');
+            let data = await response.text();
+            console.log(data);
+        
+            var card_data = document.getElementById('fetch_result6');
+            card_data.innerHTML = data;
+        
+        
+        }
+        
+        async function fetchText7() {
+            let response = await fetch('https://zumatra.com/teach/colors.php');
+            let data = await response.text();
+            console.log(data);
+        
+            var card_data = document.getElementById('fetch_result7');
+            card_data.innerHTML = data;
+        
+        
+        }
+        
+
+        async function fetchText8() {
+            let response = await fetch('https://zumatra.com/teach/colors.php');
+            let data = await response.text();
+            console.log(data);
+        
+            var card_data = document.getElementById('fetch_result8');
+            card_data.innerHTML = data;
+        
+        
+        }
+        
+        async function fetchText9() {
+            let response = await fetch('https://zumatra.com/teach/colors.php');
+            let data = await response.text();
+            console.log(data);
+        
+            var card_data = document.getElementById('fetch_result9');
+            card_data.innerHTML = data;
+        
+        
+        }
+        
+
+        
+        /** 31a036c1f5fc74ab0fffa932bf1d1da2 **/
+        
+            
+        
+        
+            </script>
+
+
+
+
+
+
+
+
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
