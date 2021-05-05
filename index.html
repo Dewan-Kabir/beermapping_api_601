@@ -214,7 +214,7 @@
         
 
         async function fetchText5() {
-            let response = await fetch('https://beermapping.com/webservice/locstate/31a036c1f5fc74ab0fffa932bf1d1da2/ny&s=json');
+            let response = await fetch('https://beermapping.com/webservice/locstate/31a036c1f5fc74ab0fffa932bf1d1da2/nj&s=json');
             let data = await response.text();
             console.log(data)
             var obj = JSON.parse(data);
@@ -223,7 +223,7 @@
             var card_data = document.getElementById('fetch_result5');
             card_data.innerHTML = 
             `
-            <h2>By Sate NY</h2>
+            <h2>By Sate NJ</h2>
             <p>Name : ${obj[0].name} </p> <br>
             <p>Status : ${obj[0].status} </p> <br>
             <p>Review Link : ${obj[0].reviewlink} </p> <br>
