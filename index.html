@@ -144,12 +144,13 @@
             let response = await fetch('https://beermapping.com/webservice/locquery/31a036c1f5fc74ab0fffa932bf1d1da2/piece&s=json');
             let data = await response.text();
             console.log(data)
+            var obj = JSON.parse(data);
             ;
         
             var card_data = document.getElementById('fetch_result1');
             card_data.innerHTML = `
             
-            <p>Name : ${data[0].name} </p> <br>
+            <p>Name : ${obj[0].name} </p> <br>
             <p>Status : ${data.status} </p> <br>
             <p>Review Link : ${data.reviewlink} </p> <br>
             <p>Street : ${data.street} </p> <br>
